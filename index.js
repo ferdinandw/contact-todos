@@ -3,11 +3,12 @@ const URL = ('http://localhost:3000/contacts')
 axios.get(URL)
     .then((response) =>{
         console.log(response);
-        const listHTML = document.querySelector("#contacts>ol")
+        const listHTML = document.querySelector("#contacts")
         data = response.data;
         data.forEach(item => {
             const {id, name, address, email , phone, company} = item
-            const itemHTML = `
+            const itemHTML = `<div class="card">
+            <img src="./assets/img/test.webp">
             Name : ${name}
             <br>
             Address : ${address}
@@ -17,13 +18,18 @@ axios.get(URL)
             Phone : ${phone}
             <br>
             Company : ${company}
-            `;
+            <br>
+            <button class="btn" onclick="ubah(${id})">Edit</button>
+            <br>
+            <button class="btn" onclick="hapus(${id})">Hapus</button>
+            </div>`;
             listHTML.innerHTML += itemHTML;
         })
     })
 
 document.getElementById('saveContact').addEventListener('submit', function(event){
     event.preventDefault();
+    const id = [0].value;
     const name = document.getElementsByName('name')[0].value;
     const address = document.getElementsByName('address')[0].value;
     const email = document.getElementsByName('email')[0].value;
@@ -31,13 +37,13 @@ document.getElementById('saveContact').addEventListener('submit', function(event
     const company = document.getElementsByName('company')[0].value;
 
     axios.post(URL, {
-        data:{
+            id,
             name,
             address,
             email,
             phone,
             company
-        }
+        
     })
     .then(response => {
         console.log(response);

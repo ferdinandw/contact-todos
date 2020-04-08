@@ -1,12 +1,20 @@
 {
-    "contacts" : [
-        {
-            "id" : 1,
-            "name": "Evan",
-            "address": "batam",
-            "email": "",
-            "phone": "",
-            "company": ""
-        }
-    ]
+  "contacts": [
+    {
+      "name": "Ferdinand",
+      "address": "Batam",
+      "email": "fwng123@gmail.com",
+      "phone": "081378032920",
+      "company": "UIB",
+      "id": 1
+    },
+    {
+      "name": "William",
+      "address": "Batam",
+      "email": "wng123@gmail.com",
+      "phone": "12313141",
+      "company": "uibeh",
+      "id": 2
+    }
+  ]
 }
