@@ -1,20 +1,12 @@
-id
-name
-address
-email
-phone
-company
+# Contact Todos
 
-axios :
-    post
-    put
-    delete
-    get
-json-server
+### This is a Website to add contacts to db.json
 
-index.html
-index.js
-db.json
-README.md
-assets:
-    icon-trash.png
+How to use it ?
+- Fill in the form
+- press Submit
+- See your Contact that you just add below
+
+Edit : To Edit the personal information
+
+Delete : Erase The selected Contact Information
